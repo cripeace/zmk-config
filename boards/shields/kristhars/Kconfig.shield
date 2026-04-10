@@ -1,0 +1,5 @@
+config SHIELD_KRISTHARS_LEFT
+    def_bool $(shields_list_contains,kristhars_left)
+
+config SHIELD_KRISTHARS_RIGHT
+    def_bool $(shields_list_contains,kristhars_right)

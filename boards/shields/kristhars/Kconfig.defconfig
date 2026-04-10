@@ -1,0 +1,34 @@
+if SHIELD_KRISTHARS_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "kristhars"
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+
+    config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+        default y
+
+    config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+        default y
+
+endif # SHIELD_KRISTHARS_LEFT
+
+if SHIELD_KRISTHARS_LEFT || SHIELD_KRISTHARS_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+    config ZMK_SPLIT_BLE
+        default y
+
+    config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+        default 1
+
+    config ZMK_BATTERY_REPORTING
+        default y
+
+    config ZMK_BATTERY_REPORT_INTERVAL
+        default 60
+
+endif # SHIELD_KRISTHARS_LEFT || SHIELD_KRISTHARS_RIGHT
